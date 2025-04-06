@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Ficha de Jogo - SUB 10</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    header, footer {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-row img {
+      max-height: 50px;
+    }
+    h1 {
+      color: #cc0000;
+      font-size: 0.8rem;
+      margin: 5px 0;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .field-group {
+      flex: 1 1 180px;
+    }
+    label {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    input, textarea {
+      width: 100%;
+    
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 50px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th {
+      background-color: #eee;
+    }
+    th, td {
+      padding: 2px;
+      text-align: center;
+    }
+    .section-title {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 12px;
+      color: #cc0000;
+      border-bottom: 2px solid #cc0000;
+      padding-bottom: 4px;
+    }
+    footer {
+      font-size: 0.8rem;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      margin-top: 30px;
+    }
+    .btn-print {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background: #cc0000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn-print:hover {
+      background: #a00000;
+    }
+    td input{
+      border: none;
+    }
+    @media print {
+      .btn-print {
+        display: none;
+      }
+    }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <header><div class="logo-row">
+    <img src="logo_left.png" alt="SC Braga">
+    <h1>Registo de Jogo - Época 2024/2025</h1>
+    <img src="logo_right.png" alt="Gverreiros do Futuro">
+
+    
+    <button class="btn-print" onclick="window.print()">Guardar como PDF</button>
+  </div>
+  </header>
+
+  <div class="grid">
+    <div class="field-group"><label>Equipa</label><input type="text" value="ADC Aveleda"></div>
+    <div class="field-group"><label>Escalão</label><input type="text" value="SUB 10"></div>
+    <div class="field-group"><label>Data</label><input type="date" value="2025-04-06"></div>
+    <div class="field-group"><label>Hora</label><input type="time" value="15:15"></div>
+    <div class="field-group"><label>Local</label><input type="text" value="Morreira"></div>
+    <div class="field-group"><label>Árbitro</label><input type="text" value="A.F."></div>
+  </div>
+
+  <div class="grid">
+    <div class="field-group"><label>Campeonato</label><input type="text" value="Benjam"></div>
+    <div class="field-group"><label>Fase</label><input type="text" value="2"></div>
+    <div class="field-group"><label>Jornada</label><input type="text" value="9"></div>
+    <div class="field-group"><label>Série</label><input type="text"></div>
+    <div class="field-group"><label>Campo</label><input type="text"></div>
+  </div>
+
+  <div class="section-title">Jogadores</div>
+  <table>
+    <thead>
+      <tr style="font-size: 8px;">
+        <th>Nome</th><th>Nº</th><th>Pos. I</th><th>Pos. II</th><th>1ª Parte</th><th>2ª Parte</th><th>Golos</th><th>Cartões</th><th>Avaliação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <td><input type='text' value='Santiago Silva' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Vicente Silva' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Diego Lisboa' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Pedro Paraíso' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Mathis Peixoto' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Guilherme Oliveira' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Rafael Vieira' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Rodrigo Gonçalves' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Guilherme Silva' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+         <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+         <td><input type='text'></td>
+      </tr>
+      <tr>
+        <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
+        <td><input type='text'></td>
+        <td><input type='text'></td>
+        <td><input type='text'></td>
+        <td><input type='text'></td>
+        <td><input type='text'></td>
+        <td><input type='text'></td>
+        <td><input type='text'></td>
+        <td><input type='text'></td>
+     </tr>
+     <tr>
+      <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
+      <td><input type='text'></td>
+      <td><input type='text'></td>
+      <td><input type='text'></td>
+      <td><input type='text'></td>
+      <td><input type='text'></td>
+      <td><input type='text'></td>
+      <td><input type='text'></td>
+      <td><input type='text'></td>
+   </tr>
+   <tr>
+    <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
+    <td><input type='text'></td>
+    <td><input type='text'></td>
+    <td><input type='text'></td>
+    <td><input type='text'></td>
+    <td><input type='text'></td>
+    <td><input type='text'></td>
+    <td><input type='text'></td>
+    <td><input type='text'></td>
+ </tr>
+   </tbody>
+  </table>
+
+  <div class="section-title">Padrão de Problemas Evidenciados no Jogo</div>
+  <textarea placeholder="Descreva os problemas evidenciados..."></textarea>
+
+  <div class="section-title">Jogadores Adversários em Destaque</div>
+  <table>
+    <thead  style="font-size: 8px;">
+      <tr>
+        <th>Clube</th><th>Nome</th><th>Posição</th><th>Nº</th><th>D. Nascimento</th><th>Tlm. Enc. Educ.</th><th>Ação Futura</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+        <td><input type="text"></td><td><input type="date"></td><td><input type="text"></td><td><input type="text"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <div><strong>Registo feito por:</strong> <input type="text" value="Sérgio Cruz"></div>
+    <div>Cidade Desportiva, Rua de Cabanas, Braga - Portugal</div>
+    <div>Coordenadas: 41.567583, -8.424377</div>
+    <div><a href="https://www.scbraga.pt" target="_blank">www.scbraga.pt</a></div>
+  </footer>
+</body>
+</html>
