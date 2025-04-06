@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <link rel="icon" href="logo_left.png" type="image/png">
   <meta charset="UTF-8">
   <title>Ficha de Jogo - SUB 10</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +10,28 @@
       font-family: 'Arial', sans-serif;
       background: #fff;
       color: #333;
-      padding: 20px;
+      padding: 10px;
       line-height: 1.5;
     }
     header, footer {
-      text-align: center;
       margin-bottom: 20px;
     }
-    .logo-row {
+    .logo-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    .logo-row img {
-      max-height: 50px;
+    .logo-header img {
+      max-height: 40px;
     }
-    h1 {
+    .logo-header h1 {
       color: #cc0000;
-      font-size: 0.8rem;
-      margin: 5px 0;
+      font-size: 1rem;
+      margin: 0;
+      flex: 1;
+      text-align: center;
     }
     .grid {
       display: flex;
@@ -44,7 +47,6 @@
     }
     input, textarea {
       width: 100%;
-    
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -55,8 +57,8 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-      font-size: 0.9rem;
+      margin-top: 10px;
+      font-size: 0.8rem;
     }
     table, th, td {
       border: 1px solid #ccc;
@@ -70,22 +72,15 @@
     }
     .section-title {
       margin-top: 10px;
-      margin-bottom: 10px;
       font-weight: bold;
       font-size: 12px;
       color: #cc0000;
       border-bottom: 2px solid #cc0000;
       padding-bottom: 4px;
     }
-    footer {
-      font-size: 0.8rem;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
-      margin-top: 30px;
-    }
-    .btn-print {
-      margin-bottom: 20px;
-      padding: 10px 20px;
+    .btn-print, .btn-add {
+      margin: 10px 5px;
+      padding: 8px 16px;
       background: #cc0000;
       color: #fff;
       border: none;
@@ -93,14 +88,14 @@
       cursor: pointer;
       font-size: 1rem;
     }
-    .btn-print:hover {
+    .btn-print:hover, .btn-add:hover {
       background: #a00000;
     }
-    td input{
+    td input {
       border: none;
     }
     @media print {
-      .btn-print {
+      .btn-print, .btn-add {
         display: none;
       }
     }
@@ -118,18 +113,12 @@
   </style>
 </head>
 <body>
-  
-
-  <header><div class="logo-row">
+  <header class="logo-header">
     <img src="logo_left.png" alt="SC Braga">
     <h1>Registo de Jogo - Época 2024/2025</h1>
     <img src="logo_right.png" alt="Gverreiros do Futuro">
-
-    
     <button class="btn-print" onclick="window.print()">Guardar como PDF</button>
-  </div>
   </header>
-
   <div class="grid">
     <div class="field-group"><label>Equipa</label><input type="text" value="ADC Aveleda"></div>
     <div class="field-group"><label>Escalão</label><input type="text" value="SUB 10"></div>
@@ -138,7 +127,6 @@
     <div class="field-group"><label>Local</label><input type="text" value="Morreira"></div>
     <div class="field-group"><label>Árbitro</label><input type="text" value="A.F."></div>
   </div>
-
   <div class="grid">
     <div class="field-group"><label>Campeonato</label><input type="text" value="Benjam"></div>
     <div class="field-group"><label>Fase</label><input type="text" value="2"></div>
@@ -148,176 +136,45 @@
   </div>
 
   <div class="section-title">Jogadores</div>
-  <table>
+  <table id="jogadores-table">
     <thead>
-      <tr style="font-size: 8px;">
+      <tr>
         <th>Nome</th><th>Nº</th><th>Pos. I</th><th>Pos. II</th><th>1ª Parte</th><th>2ª Parte</th><th>Golos</th><th>Cartões</th><th>Avaliação</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-         <td><input type='text' value='Santiago Silva' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Vicente Silva' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Diego Lisboa' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Pedro Paraíso' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Mathis Peixoto' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Guilherme Oliveira' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Rafael Vieira' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Rodrigo Gonçalves' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Guilherme Silva' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-         <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-         <td><input type='text'></td>
-      </tr>
-      <tr>
-        <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
-        <td><input type='text'></td>
-        <td><input type='text'></td>
-        <td><input type='text'></td>
-        <td><input type='text'></td>
-        <td><input type='text'></td>
-        <td><input type='text'></td>
-        <td><input type='text'></td>
-        <td><input type='text'></td>
-     </tr>
-     <tr>
-      <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
-      <td><input type='text'></td>
-      <td><input type='text'></td>
-      <td><input type='text'></td>
-      <td><input type='text'></td>
-      <td><input type='text'></td>
-      <td><input type='text'></td>
-      <td><input type='text'></td>
-      <td><input type='text'></td>
-   </tr>
-   <tr>
-    <td><input type='text' value='Santiago Carviçais' style="width: auto;"/></td>
-    <td><input type='text'></td>
-    <td><input type='text'></td>
-    <td><input type='text'></td>
-    <td><input type='text'></td>
-    <td><input type='text'></td>
-    <td><input type='text'></td>
-    <td><input type='text'></td>
-    <td><input type='text'></td>
- </tr>
-   </tbody>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+    </tbody>
   </table>
-
-  <div class="section-title">Padrão de Problemas Evidenciados no Jogo</div>
-  <textarea placeholder="Descreva os problemas evidenciados..."></textarea>
-
+  <button class="btn-add" onclick="addRow('jogadores-table')">+ Adicionar Jogador</button>
+  <section>
+    <h2>Padrão de Problemas Evidenciados no Jogo</h2>
+    <textarea placeholder="Descreva os problemas evidenciados..."></textarea>
+  </section>
   <div class="section-title">Jogadores Adversários em Destaque</div>
-  <table>
-    <thead  style="font-size: 8px;">
+  <table id="adversarios-table">
+    <thead>
       <tr>
         <th>Clube</th><th>Nome</th><th>Posição</th><th>Nº</th><th>D. Nascimento</th><th>Tlm. Enc. Educ.</th><th>Ação Futura</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
-        <td><input type="text"></td><td><input type="date"></td><td><input type="text"></td><td><input type="text"></td>
+        <td><input type='text'></td><td><input type='text'></td><td><input type='text'></td>
+        <td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td>
       </tr>
     </tbody>
   </table>
+  <button class="btn-add" onclick="addRow('adversarios-table')">+ Adicionar Adversário</button>
 
   <footer>
     <div><strong>Registo feito por:</strong> <input type="text" value="Sérgio Cruz"></div>
@@ -325,5 +182,17 @@
     <div>Coordenadas: 41.567583, -8.424377</div>
     <div><a href="https://www.scbraga.pt" target="_blank">www.scbraga.pt</a></div>
   </footer>
+
+  <script>
+    function addRow(tableId) {
+      const table = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+      const newRow = table.insertRow();
+      const colCount = table.rows[0]?.cells.length || 7;
+      for (let i = 0; i < colCount; i++) {
+        const newCell = newRow.insertCell();
+        newCell.innerHTML = '<input type="text">';
+      }
+    }
+  </script>
 </body>
 </html>
