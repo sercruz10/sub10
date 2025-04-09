@@ -14,6 +14,13 @@
   <meta charset="UTF-8">
   <title>Ficha de Jogo - SUB 10</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Select2 -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- JS jQuery + Select2 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -152,18 +159,122 @@
       </tr>
     </thead>
     <tbody>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
-<tr><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+      <!-- Repete esta estrutura para 10 linhas -->
+      <tr>
+        <td>
+          <select class="player-select" style="width: 160px;">
+            <option></option>
+            <option>Gustavo Batista</option>
+            <option>Ricardo Flores</option>
+            <option>Santiago Silva</option>
+            <option>Vicente Silva</option>
+            <option>Diego Lisboa</option>
+            <option>Lucca Bordignon</option>
+            <option>Pedro Paraíso</option>
+            <option>Raphael Gomes</option>
+            <option>Mathis Peixoto</option>
+            <option>Guilherme Oliveira</option>
+            <option>Santiago Costa</option>
+            <option>Diogo Leite</option>
+            <option>Francisco Malheiro</option>
+            <option>Rafael Vieira</option>
+            <option>Rodrigo Gonçalves</option>
+            <option>Theo Lucas Batista</option>
+            <option>Guilherme Silva</option>
+            <option>Gustavo Amorim</option>
+            <option>Salvador Gomes</option>
+            <option>Santiago Carviçais</option>
+            <option>Sara Reis</option>
+          </select>
+        </td>
+        <!-- Campos normais -->
+        <td>
+          <select class="player-select-number" style="width: 50px;">
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+          </select> 
+        </td>
+        <td><select class="player-select-position" style="width: 100px;">
+          <option></option>
+          <option>Guarda-redes</option>
+          <option>Defesa Direito</option>
+          <option>Defesa Esquerdo</option>
+          <option>Médio</option>
+          <option>Extremo Direito</option>
+          <option>Extremo Esquerdo</option>
+          <option>Avançado</option>
+        </select> </td>
+        <td><select class="player-select-position" style="width: 100px;">
+          <option></option>
+          <option>Guarda-redes</option>
+          <option>Defesa Direito</option>
+          <option>Defesa Esquerdo</option>
+          <option>Médio</option>
+          <option>Extremo Direito</option>
+          <option>Extremo Esquerdo</option>
+          <option>Avançado</option>
+        </select> </td>
+        <td><select class="player-select-time" style="width: 50px;">
+          <option></option>
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+          <option>25</option>
+          </select> </td>
+          <td><select class="player-select-time-1" style="width: 50px;">
+            <option></option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+            <option>25</option>
+            </select> </td>
+            <td><select class="player-select-gols" style="width: 40px;">
+              <option></option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              </select> </td>
+              <td><select class="player-select-card" style="width: 40px;">
+                <option></option>
+                <option>Amarelo</option>
+                <option>Duplo Amarelo</option>
+                <option>Vermelho</option>
+                
+                </select> </td>
+                <td><select class="player-select-aval" style="width: 40px;">
+                  <option></option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  </select> </td>
+      </tr>
+      <!-- Repete mais 9 linhas conforme necessário -->
     </tbody>
   </table>
+  
   <button class="btn-add" onclick="addRow('jogadores-table')">+ Adicionar Jogador</button>
   <section>
     <h2>Padrão de Problemas Evidenciados no Jogo</h2>
@@ -193,15 +304,214 @@
   </footer>
 
   <script>
+      $(document).ready(function() {
+    $('.player-select').select2({
+      placeholder: "Selecionar jogador",
+      allowClear: true
+    });
+    $('.player-select-number').select2({
+      placeholder: "Nº",
+      allowClear: true
+    });
+    $('.player-select-position').select2({
+      placeholder: "Posição",
+      allowClear: true
+    });
+    $('.player-select-position-1').select2({
+      placeholder: "Posição",
+      allowClear: true
+    });
+
+    $('.player-select-time-1').select2({
+      placeholder: "Tempo",
+      allowClear: true
+    });
+    $('.player-select-time').select2({
+      placeholder: "Tempo",
+      allowClear: true
+    });
+    $('.player-select-gols').select2({
+      placeholder: "Golos",
+      allowClear: true
+    });
+    $('.player-select-card').select2({
+      placeholder: "Cartões",
+      allowClear: true
+    });
+    $('.player-select-aval').select2({
+      placeholder: "Avaliação",
+      allowClear: true
+    });
+
+  
+
+    
+
+    
+
+    
+  });
     function addRow(tableId) {
       const table = document.getElementById(tableId).getElementsByTagName('tbody')[0];
       const newRow = table.insertRow();
       const colCount = table.rows[0]?.cells.length || 7;
-      for (let i = 0; i < colCount; i++) {
-        const newCell = newRow.insertCell();
+
+  for (let i = 0; i < colCount; i++) {
+      const newCell = newRow.insertCell();
+      if (i === 0) {
+        newCell.innerHTML = `
+          <select class="player-select" style="width: 100%">
+            <option value="">Selecionar jogador</option>
+            <option value="Gustavo Batista">Gustavo Batista</option>
+            <option value="Ricardo Flores">Ricardo Flores</option>
+            <option value="Santiago Silva">Santiago Silva</option>
+            <option value="Vicente Silva">Vicente Silva</option>
+            <option value="Diego Lisboa">Diego Lisboa</option>
+            <option value="Lucca Bordignon">Lucca Bordignon</option>
+            <option value="Pedro Paraíso">Pedro Paraíso</option>
+            <option value="Raphael Gomes">Raphael Gomes</option>
+            <option value="Mathis Peixoto">Mathis Peixoto</option>
+            <option value="Guilherme Oliveira">Guilherme Oliveira</option>
+            <option value="Santiago Costa">Santiago Costa</option>
+            <option value="Diogo Leite">Diogo Leite</option>
+            <option value="Francisco Malheiro">Francisco Malheiro</option>
+            <option value="Rafael Vieira">Rafael Vieira</option>
+            <option value="Rodrigo Gonçalves">Rodrigo Gonçalves</option>
+            <option value="Theo Lucas Batista">Theo Lucas Batista</option>
+            <option value="Guilherme Silva">Guilherme Silva</option>
+            <option value="Gustavo Amorim">Gustavo Amorim</option>
+            <option value="Salvador Gomes">Salvador Gomes</option>
+            <option value="Santiago Carviçais">Santiago Carviçais</option>
+            <option value="Sara Reis">Sara Reis</option>
+          </select>
+        `;
+      } else if(i === 1){
+        newCell.innerHTML =  `
+          <select class="player-select-number" style="width: 100%;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+          </select> 
+        `;
+      }else if(i === 2){
+        newCell.innerHTML =  `
+          <select class="player-select-position" style="width: 100%;">
+            <option>Guarda-redes</option>
+            <option>Defesa Direito</option>
+            <option>Defesa Esquerdo</option>
+            <option>Médio</option>
+            <option>Extremo Direito</option>
+            <option>Extremo Esquerdo</option>
+            <option>Avançado</option>
+          </select> 
+        `;
+
+      }else if(i === 3){
+        newCell.innerHTML =  `
+          <select class="player-select-position-1" style="width: 100%;">
+            <option>Guarda-redes</option>
+            <option>Defesa Direito</option>
+            <option>Defesa Esquerdo</option>
+            <option>Médio</option>
+            <option>Extremo Direito</option>
+            <option>Extremo Esquerdo</option>
+            <option>Avançado</option>
+          </select> 
+        `;
+
+      }
+      else if(i === 4){
+        newCell.innerHTML =  `
+        <select class="player-select-time" style="width: 100%;">
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+          <option>25</option>
+          </select>
+        `;
+
+      }else if(i === 5){
+        newCell.innerHTML =  `
+        <select class="player-select-time-1" style="width: 100%;">
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+          <option>25</option>
+          </select>
+        `;
+
+      }else if(i === 6){
+        newCell.innerHTML =  `
+        <select class="player-select-gols" style="width: 100px;">
+              <option></option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              </select>  
+              `;
+      }else if(i == 7) {
+        newCell.innerHTML =  `
+        <select class="player-select-card" style="width: 100%;">
+                <option></option>
+                <option>Amarelo</option>
+                <option>Duplo Amarelo</option>
+                <option>Vermelho</option>
+                
+                </select>   `;
+        
+
+      }else if(i == 8){
+        newCell.innerHTML =  `
+                <select class="player-select-eval" style="width: 40px;">
+                  <option></option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  </select> `;
+      }else{
         newCell.innerHTML = '<input type="text">';
       }
-    }
+  }
+
+  $('.player-select').select2();
+  $('.player-select-number').select2();
+  $('.player-select-position').select2();
+  $('.player-select-position-1').select2();
+  $('.player-select-time').select2();
+  $('.player-select-time-1').select2();
+  $('.player-select-gols').select2();
+  $('.player-select-card').select2();
+
+  $('.player-select-eval').select2();
+
+
+  
+
+  
+}
+
+
   </script>
 </body>
 </html>
